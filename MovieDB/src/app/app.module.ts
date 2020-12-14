@@ -3,16 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ListadoPokemonComponent } from './listado-pokemon/listado-pokemon.component';
+import { ListaActoresComponent } from './lista-actores/lista-actores.component';
 
 import {MatTableModule} from '@angular/material/table';
 import {HttpClientModule} from '@angular/common/http';
-import { PokemonService } from './services/pokemon-service';
+import { ActoresService } from './services/actores.service'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListadoPokemonComponent
+    ListaActoresComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +20,7 @@ import { PokemonService } from './services/pokemon-service';
     MatTableModule,
     HttpClientModule
   ],
-  providers: [PokemonService],
+  providers: [ActoresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
