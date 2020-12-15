@@ -9,7 +9,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class ListadoStarWarsComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'director'];
+  displayedColumns: string[] = ['name', 'director','numero'];
   listadoStarWars = new MatTableDataSource();
 
   constructor(private starWarsService: StarWarsService) { }

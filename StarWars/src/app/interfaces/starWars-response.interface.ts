@@ -1,6 +1,7 @@
 export interface StarWarsResult {
     title: string;
     director: string;
+    episode_id: number;
 }
 
 export interface StarWarsResponse {

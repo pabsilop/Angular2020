@@ -1,0 +1,27 @@
+<table mat-table [dataSource]="listadoBiblioteca" class="mat-elevation-z8">
+
+  <!-- Nombre Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id_BNE}} </td>
+  </ng-container>
+
+  <!-- Nombre Column -->
+  <ng-container matColumnDef="fecha">
+    <th mat-header-cell *matHeaderCellDef> Fecha de Nacimiento </th>
+    <td mat-cell *matCellDef="let element"> {{element.fecha_de_nacimiento}} </td>
+  </ng-container>
+   <!-- Nombre Column -->
+   <ng-container matColumnDef="nombre">
+    <th mat-header-cell *matHeaderCellDef> Nombre </th>
+    <td mat-cell *matCellDef="let element"> {{element.nombre_de_persona}} </td>
+  </ng-container>
+    <!-- Nombre Column -->
+    <ng-container matColumnDef="genero">
+      <th mat-header-cell *matHeaderCellDef> Género </th>
+      <td mat-cell *matCellDef="let element"> {{element.genero}} </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
