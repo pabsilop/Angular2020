@@ -7,12 +7,14 @@ import { ListaActoresComponent } from './lista-actores/lista-actores.component';
 
 import {MatTableModule} from '@angular/material/table';
 import {HttpClientModule} from '@angular/common/http';
-import { ActoresService } from './services/actores.service'
+import { ActoresService } from './services/actores.service';
+import { DetalleActorComponent } from './detalle-actor/detalle-actor.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListaActoresComponent
+    ListaActoresComponent,
+    DetalleActorComponent
   ],
   imports: [
     BrowserModule,
