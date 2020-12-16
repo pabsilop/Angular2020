@@ -13,8 +13,24 @@
 
     <ng-container matColumnDef="popularidad">
       <th mat-header-cell *matHeaderCellDef> Popularidad </th>
-      <td mat-cell *matCellDef="let element"> {{element.popularity}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.popularity}}</td>     
     </ng-container>
+
+    <ng-container matColumnDef="progress">
+        <th mat-header-cell *matHeaderCellDef> Progreso </th>
+        <td mat-cell *matCellDef="let element">
+          <circle-progress
+          [percent]="70"
+          [radius]="50"
+          [outerStrokeWidth]="10"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#78C000'"
+          [innerStrokeColor]="'#C7E596'"
+          [animation]="true"
+          [animationDuration]="1000"
+        ></circle-progress> </td>
+      </ng-container>
+
 
 
   <!--

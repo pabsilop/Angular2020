@@ -9,7 +9,7 @@ import {MatTableModule} from '@angular/material/table';
 import {HttpClientModule} from '@angular/common/http';
 import { ActoresService } from './services/actores.service';
 import { DetalleActorComponent } from './detalle-actor/detalle-actor.component'
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,18 @@ import { DetalleActorComponent } from './detalle-actor/detalle-actor.component'
     BrowserModule,
     BrowserAnimationsModule,
     MatTableModule,
-    HttpClientModule
+    HttpClientModule,
+
+    NgCircleProgressModule.forRoot({
+      // set defaults here
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 8,
+      outerStrokeColor: "#78C000",
+      innerStrokeColor: "#C7E596",
+      animationDuration: 300,
+    })
+
   ],
   providers: [ActoresService],
   bootstrap: [AppComponent]

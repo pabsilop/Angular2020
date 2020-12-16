@@ -9,7 +9,7 @@ import { ActoresService } from '../services/actores.service'
 })
 export class ListaActoresComponent implements OnInit {
 
-  displayedColumns: string[] = ['name','foto','popularidad'];
+  displayedColumns: string[] = ['name','foto','popularidad','progress'];
   listadoActores = new MatTableDataSource();
 
   urlImage:string = 'https://image.tmdb.org/t/p/original/'
