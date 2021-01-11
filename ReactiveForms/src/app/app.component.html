@@ -1,0 +1,11 @@
+<form [formGroup]="form" (ngSubmit)="submitForm()">
+  <input type="text" [formControlName]="'username'" placeholder="Nombre"/>
+  <div *ngIf="form.get('username').dirty && form.get('username').hasError('required')">Error</div>
+  <input type="text" [formControlName]="'subname'"placeholder="Apellidos"/>
+  <input type="text" [formControlName]="'phone'" placeholder="Teléfono"/>
+  <input type="text" [formControlName]="'email'" placeholder="E-mail"/>
+  <input type="password" [formControlName]="'password'" placeholder="Contraseña"/>
+  <div *ngIf="form.get('password').dirty && form.get('password').hasError('required')">Error</div>
+  <input type="password" [formControlName]="'rePassword'" placeholder="Repita la contraseña"/>
+  <button type="submit">Enviar</button>
+</form>
