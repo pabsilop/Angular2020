@@ -9,9 +9,10 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
+  student : Student
   studentsList: Student[];
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id','name', 'lastname', 'curse','age'];
+  displayedColumns: string[] = ['id','name', 'lastname', 'curse','age','options'];
 
   constructor(private studentsService : StudentsService) { }
 
@@ -27,4 +28,19 @@ export class StudentListComponent implements OnInit {
     })
   }
 
+  create(student : Student){
+    this.studentsService.createStudents(student);
+  }
+
+  update(student : Student){
+    this.studentsService.updateStudents(student);
+  }
+
+  delete(id : string){
+    this.studentsService.deleteStudents(id);
+  }
+
+  enviarDatos(){
+
+  }
 }
