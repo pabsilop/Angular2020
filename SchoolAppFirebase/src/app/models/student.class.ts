@@ -4,9 +4,16 @@ export class Student{
 }
 
 export class StudentData{
-  
-    name: String;
-    lastName: String;
-    age: number;
-    curse: String;
+
+  constructor(public name: string, public lastname: string, public age : number, public curse : string){
+
+  }
+  transform(){
+    return {
+      name: this.name,
+      lastname: this.lastname,
+      age: this.age,
+      curse: this.curse
+    }
+  }
 }

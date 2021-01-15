@@ -9,6 +9,9 @@ import { environment } from 'src/environments/environment';
 import { StudentsService } from './service/students.service';
 import { StudentListComponent } from './components/student-list/student-list.component';
 import {MatTableModule} from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import {MatTableModule} from '@angular/material/table';
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
-    MatTableModule
+    MatTableModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [StudentsService],
   bootstrap: [AppComponent]

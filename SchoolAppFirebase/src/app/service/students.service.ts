@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Student } from '../models/student.class';
+import { Student, StudentData } from '../models/student.class';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +13,11 @@ export class StudentsService {
     return this.firestore.collection('students').snapshotChanges();
   }
 
-  createStudents(student: Student){
-    return this.firestore.collection('students').add(student);
+  createStudents(student: StudentData){
+    const id = this.firestore.createId();
+    const req = {...student.transform(),id:id}
+    //return this.firestore.collection('students').doc(id).set(req);
+    return this.firestore.collection('students').add(student.transform());
   }
 
   updateStudents(student : Student){
